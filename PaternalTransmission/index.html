@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Paternal Transmission scripts</title>
+</head>
+<body>
+<p>Data and R scripts for
+<br>
+<i>Extreme-depth re-sequencing of mitochondrial DNA finds no evidence of paternal transmission in humans </i></p>
+by Pyle, Hudson, Wilson,  Coxhead, Smertenko, Herbert, Santibanez-Koref and Chinnery.
+
+<h2> Data Availability </h2>
+
+
+
+<p><i>Data 
+used for this submission will be made available on request to the 
+ALSPAC executive committee (<a href="mailto:alspac-exec@bristol.ac.uk">alspac-exec@bristol.ac.uk</a>).
+The ALSPAC data management plan (available
+<a href="http://www.bristol.ac.uk/alspac/researchers/data-access/documents/alspac-data-management-plan.pdf">here</a>)
+ describes in detail the policy regarding 
+data sharing, which is through a system of managed open access.
+ which is through a system of managed open access.</i>
+</p>
+
+Simulated data in the format required for this manuscript is <a href="fakedata.html">here</a>.
+
+These simulated data are the counts of aligned short haplogroups for 
+four mother, father, child trios, for three different mtDNA haplogroup motifs.
+
+<h2>R Code</h2>
+
+<p>
+The file <a href="PaternalTransmission.R" >PaternalTransmission.R</a> contains <a href="http://cran.r-project.org/" >R</a> 
+code for power calculations to support analysis.  This code requires the VGAM R package that 
+is available from <a href="http://cran.r-project.org/" >CRAN</a>.
+</p>
+
+<p>There are four functions in this code.  </p>
+<dl>
+<dt><strong>bootHT(mother,child,nm,nc,n_boot=100000)</strong></dt>
+<dd>A function to perform the hypothesis tests in <em>Pyle et al.</em> This takes the number of 
+reads matching the father's mtDNA (for a mismatching father), and the total number of maternal and paternal
+reads and tests this against the distribution of reads for the observed mtDNA counts in oocytes and sperm.
+<br> This function takes the parameters:
+<dl>
+	<dt><strong>mother</strong></dt>
+	<dd>The number of maternal counts that match the father</dd>
+	<dt><strong>child</strong></dt>
+	<dd>The number of reads that match the father in the child.</dd>
+	<dt><strong>nm</strong></dt>
+	<dd>The total number of maternal reads</dd>
+	<dt><strong>nc</strong></dt>
+	<dd>The total number of child reads</dd>
+	<dt><strong>n_boot</strong></dt>
+	<dd>The number of bootstrap samples to take.</dd>
+</dl>
+</dd>
+<br>
+<dt><strong>PaternalTransmission0(mother,child,nm,nc,n_boot=100000)</strong></dt>
+<dd>A function to test whether the data are consistent with a paternal contribution of 0.  This assumes that the 
+child's mismatching haplotype is at the same frequency as the mother, either due to misscoring or 
+inherited heteroplasmy:
+<dl>
+	<dt><strong>mother</strong></dt>
+	<dd>The number of maternal counts that match the father</dd>
+	<dt><strong>child</strong></dt>
+	<dd>The number of reads that match the father in the child.</dd>
+	<dt><strong>nm</strong></dt>
+	<dd>The total number of maternal reads</dd>
+	<dt><strong>nc</strong></dt>
+	<dd>The total number of child reads</dd>
+	<dt><strong>n_boot</strong></dt>
+	<dd>The number of bootstrap samples to take.</dd>
+</dl>
+</dd>
+<br>
+	<dt><strong><em>powerFunc(coverage,het,freq,reps=1E5,critical=0.05,show_plot=FALSE)</em></strong></dt>
+	<dd>This function calculates the proportion of times that a hypothesis test that the 
+	proportion of mtDNA contributed by the father is <i>freq</i> would be rejected in favour of 
+	a one-tailed alternative hypothesis that the proportion is less than <i>freq</i>, under conditions 
+	of extreme depth resequencing at coverage <i>coverage</i>.<br>
+This function that takes the parameters:
+	<dl>
+	<dt><strong>coverage</strong></dt>
+	<dd>The coverage which is assumed to be the same in mothers and children</dd>
+	<dt><strong>het</strong></dt>
+	<dd>The frequency of heteroplasmy for this haplotype</dd>
+	<dt><strong>freq</strong></dt>
+	<dd>The relative frequency of paternal mtDNA amongst all mtDNA.</dd>
+	<dt><strong>reps</strong></dt>
+	<dd>The number of replicates used to calculate the power.  By default this is 1E7.</dd>
+	<dt><strong>critical</strong></dt>
+	<dd>The critical value used.  By default this is p=0.05.</dd>
+	<dt><strong>show_plot</strong></dt>
+	<dd>Show a plot of the distribution of the difference under H_0, the distribution of differences under
+H_1, and the critical value.</dd>
+	<br>
+</dl>
+</dd>
+	<dt><strong><em>powerFuncB(coverage,het,freq,reps=1E7,critical=0.05)</em></strong></dt>
+		<dd>This function performs the power calculation on a different test.  This test is a test against 
+		a null hypothesis that the proportion transmitted is 0, against an alternative that the proportion transmitted is greater than 0, when the   
+	proportion of mtDNA contributed by the father is greater than 0.  These power calculations are performed
+	where the frequency of paternal heteroplasmy is <i>freq</i>, and the heteroplasmy of the haplotype 
+	is <i>het</i> under conditions of extreme depth resequencing at coverage <i>coverage</i>.  This test 
+	will give the same power as <b>powerFunc</b>, as the tests are equivalent 
+due to symmetry of the underlying distributions.
+</dl>
+
+<p>Example of the use of these functions can be found within the file.  </p>
+
+<p>These functions can be used to investigate the power.  To get the following
+plot do</p>
+
+<code>
+myCoverage <- c(10000,20000,50000,100000,200000,500000,1000000) <br>
+pow <- sapply(myCoverage,powerFunc,het=0.001,freq=0.0002)  <br>
+plot(myCoverage,pow,log="x",ylim=c(0,1),ylab="Power at a 5% level",xlab="Coverage",main="Power with increasing coverage",axes=FALSE) <br>
+axis(1,at=myCoverage,labels=c(expression(10^4),expression(2 %*% 10^4),expression(5 %*% 10^4) <br> 
+        ,expression(10^5),expression(2 %*% 10^5),expression(5 %*% 10^5),expression(10^6)))<br>
+axis(2)
+</code>
+
+
+<img src="power.png" width="400" height="400" alt="power plot" />
+
+
+<p>Note that these calculations can take a little time if you choose a large number of replicates for 
+the power calculations.  For the manuscript 1E7 replicates were used. </p>
+
+<hr>
+
+<address><a href=
+"mailto:Ian.Wilson@ncl.ac.uk">Ian.Wilson@ncl.ac.uk</a></address>
+<p>Last Modified <i>2nd January 2014</i></p>
+</body>
+</html>
