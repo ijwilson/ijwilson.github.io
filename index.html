@@ -12,8 +12,7 @@ h3{font: 120%}
 </head>
 <body>
 <h1>Home Page for Ian Wilson</h1>
- <h3> Institute of Genetic Medicine</h3>
- <h3>Newcastle University</h3>
+ <h3> Institute of Genetic Medicine<br>Newcastle University</h3>
 <p><a href=
 "mailto:Ian.Wilson@ncl.ac.uk">Ian.Wilson@ncl.ac.uk</a><br>
  <a href="http://www.ncl.ac.uk/igm/staff/profile/ian.wilson">
@@ -29,14 +28,24 @@ Institutional Home Page with contact details and publications</a>
  <td>18 January 2017</td><td><a href="http://rpubs.com/ijwilson/242602">JAGS Analysis of Copy Number</a></td>
 </tr>
 
-<tr>
- <td>12 November 2014</td><td>Extreme-depth re-sequencing of mitochondrial DNA finds no evidence of paternal transmission in humans<a href="PaternalTransmission/index.html"> Data & Code</a></td>
+<tr bgcolor="#D8FFF0">
+ <td>12 November 2014</td><td>Extreme-depth re-sequencing of mitochondrial DNA finds no evidence of
+   paternal transmission in humans</td>
+ </tr>
+<tr bgcolor="#D8FFF0">
+  <td></td><td><a href="PaternalTransmission/index.html">Data & Code</a></td>
  </tr>
 
-<tr><td></td><td>
-Inference for Maternal Pedigrees with Partial Selfing <b>IMPPS</b> <a href="impps/index.html">Home Page</a>
+<tr><td></td>
+  <td>
+Inference for Maternal Pedigrees with Partial Selfing <b>IMPPS</b> </td></tr>
+<tr><td></td>
+  <td><a href="impps/index.html">Home Page</a>
 </td></tr>
- <tr><td></td><td><b><a href="QTLtree/index.html">QTLtree</a></b> R library and stand alone program <a href="QTLtree/index.html">Home Page</a></td></tr>
+ <tr bgcolor="#D8FFF0"><td></td>
+ <td><b><a href="QTLtree/index.html">QTLtree</a></b> R library and stand alone program </td></tr>
+ <tr bgcolor="#D8FFF0"><td></td>
+   <td>   <a href="QTLtree/index.html">Home Page</a></td></tr>
 </tbody>
 </table>
 <hr>
@@ -49,13 +58,13 @@ in my <a href="R">R package directory</a><br>
 Install packages on unix/linux using the commands<br>
 <font face="Courier New, Courier">R CMD INSTALL
 packagename.tar.gz</font><br>
-<p>To install on a windows systems use the zip versions 
+<p>To install on a windows systems use the zip versions
 and install from within R using<br>
  <font face="Courier New, Courier">
 > install.packages("packagename.zip",repos=NULL)</font><br>
 <br>
-Where you have downloaded the package to your working directory.  Once installed the 
-zip file can be safely deleted. 
+Where you have downloaded the package to your working directory.  Once installed the
+zip file can be safely deleted.
 <br>
 <br>
 <table bgcolor="#C3E3E4" cellspacing="20" summary="R packages">
@@ -93,14 +102,14 @@ Graphs.  Requires the <strong>ape</strong> package for plots.</td>
 <tr>
 <td><a href="R/ijwtools_0.1.tar.gz">ijwtools.tar.gz</a></td>
 <td><a href="R/ijwtools_0.1.zip">ijwtools.zip</a></td>
-<td>My own set of utility functions (mainly for dealing with genetic data and the results from my own programs) 
+<td>My own set of utility functions (mainly for dealing with genetic data and the results from my own programs)
 including quick reading from xml files, omnibus tests, Manhattan distances
 between rows in a table, multivariate D' calculation.</td>
 </tr>
 <tr><td><a href="R/snptree_0.1.tar.gz">snptree</a></td>
 <td></td>
-<td>Create and plot lexical trees from SNP data.  Used in paper 
-<i>Recent mitochondrial DNA mutations increase the risk of developing multiple common late-onset human diseases</i>, 
+<td>Create and plot lexical trees from SNP data.  Used in paper
+<i>Recent mitochondrial DNA mutations increase the risk of developing multiple common late-onset human diseases</i>,
 by Hudson <i>et al.</i>
 </td></tr>
 </tbody>
@@ -111,10 +120,10 @@ panel) along with the tree under a single site (top left panel) and
 tree heights and lengths (top right panel). Right plot gives views
 of trees 100 sites apart. Click on either plot for a larger
 view.</p>
-<a href="pictures/snapshot1.png"><img src=
-"pictures/snapshot1_thumbnail.png" width="256" height="189" border=
-"0" alt=""></a> <a href="pictures/snapshot2.png"><img src=
-"pictures/snapshot2.png" width="256" height="189" border="0" alt=
+<a href="images/snapshot1.png"><img src=
+"images/snapshot1_thumbnail.png" width="256" height="189" border=
+"0" alt=""></a> <a href="images/snapshot2.png"><img src=
+"images/snapshot2.png" width="256" height="189" border="0" alt=
 ""></a>
 <h2>C/C++ Software</h2>
 <h3>Unix Systems</h3>
@@ -214,7 +223,7 @@ comments/bugs to <a href=
 <h3>Micsat</h3>
 <table bgcolor="#C3E3E4" cellspacing="30" summary="Micsat description">
 <tr>
-<td><img src="pictures/micsat1.png" align="bottom" border="0" alt="Micsat logo" WIDTH="180" ></td>
+<td><img src="images/micsat1.png" align="bottom" border="0" alt="Micsat logo" WIDTH="180" ></td>
 <td>
 <p>This is the program described in the paper "Genealogical
 inference from microsatellite data" by Wilson and Balding published
@@ -226,7 +235,7 @@ the downloaded files.</p>
 <tr>
 <td>
 <h3 align="center"><a name="batwing" id="batwing"><img src=
-"pictures/bat.gif" align="bottom" border="0" width="180" alt="BATWING logo"></a></h3>
+"images/bat.gif" align="bottom" border="0" width="180" alt="BATWING logo"></a></h3>
 </td>
 <td><p><span style="font-size: 18pt;">B</span>ayesian <span style=
 "font-size: 18pt;">A</span>nalysis of <span style=
@@ -242,7 +251,7 @@ A</i>, <b>166</b>: 155-188.<br>
 <a href="batwing/batwing.tar.gz">Download</a></p></td>
 </tr>
 <tr>
-<td><img src="pictures/parentage.jpg" align="bottom" border="0" alt="Parentage logo"
+<td><img src="images/parentage.jpg" align="bottom" border="0" alt="Parentage logo"
 height="171" width="180"></td>
 <td><font face="Comic Sans MS"><strong>Parentage</strong></font>
 <p>Program described in <cite>Emery, Wilson, Craig, Boyle and Noble
@@ -253,9 +262,9 @@ squid.<a href=
 Molecular Ecology</a>: 10: 1265-1278.</cite></p>
 <a href="parentage/parentage.tar.gz" name="parentage" id="parentage">download</a>
 <p>The Computational Biology Service Unit at Cornell University
-provides free world-wide access to parentage via a web interface (BioHPC.org). 
-Using this interface, researchers can run a variety of computationally 
-intensive bioinformatics and population genetics tools, Parentage being one of them. 
+provides free world-wide access to parentage via a web interface (BioHPC.org).
+Using this interface, researchers can run a variety of computationally
+intensive bioinformatics and population genetics tools, Parentage being one of them.
 <p>
 <a href="http://cbsuapps.tc.cornell.edu/parentage.aspx">Web inferface at BioHP.org</a>
 
@@ -293,10 +302,9 @@ Multivariate Normal Model</a>, and <a href=
 "bugs/twinsbeta.html">Twins Stem Cell Number</a></p>
 <hr>
 <address><a href=
-"mailto:I.J.Wilson@ncl.ac.uk">I.J.Wilson@ncl.ac.uk</a></address>
+"mailto:Ian.Wilson@ncl.ac.uk">Ian.Wilson@ncl.ac.uk</a></address>
 <p>Last Modified <i>18 January 2017</i></p>
 
 
 </body>
 </html>
-
