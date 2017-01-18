@@ -1,0 +1,82 @@
+<!--
+        QTLtree.html
+        
+        Copyright 2011 Ian Wilson <ijw@malecot>
+        
+        This program is free software; you can redistribute it and/or modify
+        it under the terms of the GNU General Public License as published by
+        the Free Software Foundation; either version 2 of the License, or
+        (at your option) any later version.
+        
+        This program is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+        GNU General Public License for more details.
+        
+        You should have received a copy of the GNU General Public License
+        along with this program; if not, write to the Free Software
+        Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
+        MA 02110-1301, USA.
+-->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+	<title>QTLtree Home Page</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Bluefish 1.0.7"/>
+</head>
+
+<body>
+<h1>QTLtree Home page</h1>
+
+<p>Download the software <a href="QTLtree.tar.gz">here</a>.  This file contains example files and scripts to 
+generate simulated data for use with QTLtree.</p>
+
+
+
+<pre>
+wget  http://math.nist.gov/tnt/tnt_126.zip
+unzip -d tnt tnt_126.zip   # unzips into directory tnt
+</pre>
+<p>The software program QTLtree is available to download.  
+Note that this program is still in testing and that the usual caveats apply.  
+The program is not particularly user 
+friendly and a limited manual for QTLtree is in the file
+<a href="QTLtreeManual.pdf">QTLtreeManual.pdf</a> </p>
+
+<h5>Unix Systems</h5>
+<p>Software is C++ source code in the form of zipped tar files.  Download source (below).
+Use<br>
+<samp>gunzip -zxf QTLtree.tar.gz</samp>, change to the program directory <samp>QTLtree/src</samp> and type 
+<samp>make</samp>
+to compile the program. 
+
+<h5>dependencies</h5>
+<p>Note that the <a href="http://www.gnu.org/software/gsl/">Gnu Scientific Library (gsl)</a> is required for the 
+compilation of <b>QTLtree</b>.  This is available <a href="ftp://ftp.gnu.org/gnu/gsl/">here</a> and 
+binaries are available for the major linux distributions and cygwin/mingw32.</p>
+
+<h6>TNT</h6>
+
+<p>This software needs the <a href = "http://math.nist.gov/tnt">Template Numerical Toolkit (TNT)</a>
+ for C++ to compile.  <a href = "http://math.nist.gov/tnt/tnt_126.zip">download</a> this library and unzip 
+ into the src directory.  This library is a collection of headers and requires no further installation.  
+ Commands to do this are included below, if you have <kbd>wget</kbd>.
+</p>
+
+<p>This program was designed to work with data that is in the same format as 
+the <a href="http://www.gaworkshop.org/gaw17/data.html">GAW 17 data</a>.  
+Requests can be made <a href="http://www.gaworkshop.org/gaw17/data.html">here</a>. It will work with these data directly.  
+</p>
+
+<p>My program <a href="http://www.staff.ncl.ac.uk/i.j.wilson/sima/index.html">sima</a>, can be used to simulate data to 
+work with QTLtree.  A 
+python file, is included in the distribution which can be used to execute this program
+and generate data in the correct format.</p>
+
+
+</body>
+</html>
