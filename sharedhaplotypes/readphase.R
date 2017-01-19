@@ -1,6 +1,5 @@
 ## function to read PHASE pairs output
-readpairs <- function(filename)
-{
+readpairs <- function(filename) {
   conn = file(filename,"r")
   res <- readLines(conn)
   inds = grep("IND",res)
@@ -12,7 +11,7 @@ readpairs <- function(filename)
   r = data.frame(cbind(namecol,data))
   r[,4] <- as.numeric(paste(r[,4]))
   close(conn)
-  r
+  return(r)
 }
 # function to split pairs data by a single positions
 splitter <- function(pairdata,splits=c(1)) {
@@ -57,4 +56,3 @@ b = apply(raw,1,paste,collapse="")
 u <- substr(paste(b),15,23)=="ATGTGTCAC"
 
 print(sum(u))
-
