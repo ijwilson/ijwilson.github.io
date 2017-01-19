@@ -1,0 +1,1263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	
+	<META NAME="VPSiteProject" CONTENT="file:///H|/www/downloads/download.vpp"><META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Originator content="Microsoft Word 9">
+<link rel=File-List href="./mvncode_files/filelist.xml">
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Wilson</o:Author>
+  <o:LastAuthor>Wilson</o:LastAuthor>
+  <o:Revision>4</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:Created>2000-07-20T14:24:00Z</o:Created>
+  <o:LastSaved>2000-07-20T14:25:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>2061</o:Words>
+  <o:Characters>11750</o:Characters>
+  <o:Company>University of Aberdeen</o:Company>
+  <o:Lines>97</o:Lines>
+  <o:Paragraphs>23</o:Paragraphs>
+  <o:CharactersWithSpaces>14429</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:Compatibility>
+   <w:SpaceForUL/>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AutoSpaceLikeWord95/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+  </w:Compatibility>
+ </w:WordDocument>
+</xml><![endif]-->
+
+	<META NAME="GENERATOR" Content="Visual Page 2.0 for Windows">
+	<TITLE>Multivariate Normal Model for Heritability of Drift</TITLE>
+
+	<STYLE TYPE="text/css">
+	<!--
+	P.MsoNormal	 {
+			mso-style-parent : "";
+	margin:0in ;
+			margin-bottom : .0001pt ;
+			mso-pagination : widow-orphan ;
+			mso-layout-grid-align : none ;
+			punctuation-wrap : simple ;
+			text-autospace : none ;
+			mso-fareast-font-family : "Times New Roman" ;
+			mso-bidi-font-family : "Times New Roman" ;
+			Font-Family : Times New Roman ;
+			Font-Size : 10pt
+		}
+	H1	 {
+			mso-style-next : Normal ;
+			margin-top : 12.0pt ;
+			margin-bottom : 3.0pt ;
+			mso-pagination : widow-orphan ;
+			page-break-after : avoid ;
+			mso-outline-level : 1 ;
+			mso-layout-grid-align : none ;
+			punctuation-wrap : simple ;
+			text-autospace : none ;
+			mso-font-kerning : 16.0pt ;
+			Margin-Left : 0in ;
+			Margin-Right : 0in ;
+			Font-Family : Arial ;
+			Font-Size : 16pt
+		}
+	DIV.MsoNormal	 {
+			mso-style-parent : "";
+	margin:0in ;
+			margin-bottom : .0001pt ;
+			mso-pagination : widow-orphan ;
+			mso-layout-grid-align : none ;
+			punctuation-wrap : simple ;
+			text-autospace : none ;
+			mso-fareast-font-family : "Times New Roman" ;
+			mso-bidi-font-family : "Times New Roman" ;
+			Font-Family : Times New Roman ;
+			Font-Size : 10pt
+		}
+	DIV.Section1	 {
+			page : Section1
+		}
+	LI.MsoNormal	 {
+			mso-style-parent : "";
+	margin:0in ;
+			margin-bottom : .0001pt ;
+			mso-pagination : widow-orphan ;
+			mso-layout-grid-align : none ;
+			punctuation-wrap : simple ;
+			text-autospace : none ;
+			mso-fareast-font-family : "Times New Roman" ;
+			mso-bidi-font-family : "Times New Roman" ;
+			Font-Family : Times New Roman ;
+			Font-Size : 10pt
+		}
+	BODY	 {
+			tab-interval : .5in
+		}
+	@font-face	 {
+			panose-1 : 0 0 0 0 0 0 0 0 0 0 ;
+			mso-font-charset : 0 ;
+			mso-generic-font-family : modern ;
+			mso-font-format : other ;
+			mso-font-pitch : fixed ;
+			mso-font-signature : 3 0 0 0 1 0 ;
+			Font-Family : Courier
+		}
+	@page Section1	 {
+			size : 595.3pt 841.9pt ;
+			margin : 1.0in 1.25in 1.0in 1.25in ;
+			mso-header-margin : .5in ;
+			mso-footer-margin : .5in ;
+			mso-paper-source : 0
+		}
+	-->
+	</STYLE>
+
+</HEAD>
+
+<BODY lang="EN-GB">
+
+
+<DIV CLASS="Section1">
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 16pt"><FONT
+	FACE="Arial">Multivariate Normal Model for Heritability of Drift</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">Model for multivariate drift in allele frequencies away from 0.5.</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp; </FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">This
+	model takes account of the correlation in drift away from 0.5 by modelling the drift as a multivariate normal distribution
+	on the logit of the allele frequencies.</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">We perform a hierarchical model because of the error structure.</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp; </FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">The
+	error is in two parts - teh first due to errors with the PCR reaction, the second due to errors with the gel runs.</FONT></SPAN><SPAN
+	STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp; </FONT></SPAN><SPAN
+	STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">These errors are hierarchical, so any classical
+	analysis would have to use a split-plot type design - this would be very difficult as we have a lot of missing
+	data - for most twin pairs we have either a second gel run or a second PCR and gel run, in very few do we have
+	both.</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+	</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">A Bayesian analysis
+	is easier with this much missing data.</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 16pt"><FONT
+	FACE="Courier">Model</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 12pt"><FONT FACE="Courier">
+	</FONT></SPAN><SPAN STYLE="Font-Size : 12pt"><FONT FACE="Courier"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 12pt"><FONT
+	FACE="Courier">{</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># lp[twinpair][celltype][whichtwin][replicate]</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># replicate 2 is a repeated run</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># replicate 3 is repeated PCR and run</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># whichtwin = 1, 2 for first or second twin</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (i in 1:N) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (j in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (k in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (m in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># both gel runs (if both occurred)</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># the observed lp is normal mean lpp var 1/taue[1]</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN
+	STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT FACE="Courier">lp[i,j,k,m] ~ dnorm(lpp[i,j,k,1],taue[1]);</FONT></SPAN><FONT
+	FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">#</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">if we have a second PCR run then var 1/taue[1]</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># lpp are the (missing) frequencies following PCR </FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">lp[i,j,k,3] ~dnorm(lpp[i,j,k,2],taue[1]); </FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (m in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT FACE="Courier">lpp[i,j,k,m]
+	~ dnorm(lpm[i,j,k],taue[2]);</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; </FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">} </FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">lpm[i,j,1:2]~dmnorm(mu[j,],tau[j,code[i],,]) </FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 2"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># we have tau[celltype][twintype][twin1][twin2]</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># twintype==1 is for monozygotes;</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">twintype==2 dizygotes</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier"># where celltype==1 </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">neutrophils;</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">celltype==2 tcells</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (i in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (j in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">tau[i,j,1:2,1:2]~dwish(R[,],2);</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (k in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">for (m in 1:2) {</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN
+	STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT FACE="Courier">Sigma[i,j,k,m]&lt;-inverse(tau[i,j,,],k,m);</FONT></SPAN><FONT
+	FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 2"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">#</FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">F[i,j,k,k] &lt;- Sigma[i,j,k,k]/(16*4);</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">#cov covariance[celltype][twintype]</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">cor[i,j]&lt;-Sigma[i,j,1,2]/(sqrt(Sigma[i,j,1,1]*Sigma[i,j,2,2]))</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">taue[i]~dgamma(0.001, 0.001)</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">sigmae[i] &lt;- 1/taue[i];</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-spacerun : yes"><FONT
+	FACE="Courier">&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">h2[i] &lt;- 2.*(cor[i,1]-cor[i,2]);</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US ; mso-tab-count : 1"><FONT
+	FACE="Courier">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">}</FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-bidi-font-size : 12.0pt ; mso-ansi-language : EN-US"><FONT
+	FACE="Courier">} </FONT></SPAN><FONT FACE="Courier"><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><FONT FACE="Courier"><![if !supportEmptyParas]></FONT><SPAN
+	STYLE="mso-bidi-font-size : 16.0pt ; mso-ansi-language : EN-US"><FONT FACE="Courier">&nbsp;</FONT></SPAN><FONT
+	FACE="Courier"><![endif]><o:p></o:p></FONT></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 16pt"><FONT
+	FACE="Arial">Initial Values</FONT></SPAN><SPAN STYLE="Font-Size : 16pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">list(taue=c(100,100),</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">lpm=structure(.Data=c(</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.867500567704723, 0.0582689081239758, -0.245900538436826, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.173953307123438, 1.10856261952128, -0.136965855073157, -0.908818717035454, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.266573109241546, -0.0565703514883942, -0.527632742082372, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.548121408509687, 0.246860077931526, -2.39689577246529, -1.42295834549148, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.0769610411361286, 0.371563556432483, -0.39452516806983, -0.359536176219765, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-1.27296567581289, -0.336872316642553, 1.02604159583327, 0.512823626428664, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.536493370514568, 0.207014169384326, 0.444685821261446, 0.553885113226438, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.0478373294141601, -0.0356271776431512, -0.221894331913778, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.104250021373799, 0.357674444271816, 0.500775287912489, -0.84863208340034, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.12897038129696, 0.916290731874155, 0.756121979721333, 0.559615787935423, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.542324290825362, 0.165514438477574, 0.593326845277734, 0.405465108108164, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.625938430866495, -0.294371060602578, -0.811930716549912, 0.165514438477574, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.207024169434327, 0.678033542749898, 0.62057648772511, 0.371563556432483, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.65232518603969, -2.48891467118554, -0.638658995275876, 1.48160454092422, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.59783700075562, 0.29266961396282, 0.444685821261446, 0.285178942233662, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.161343150408763, 0.190620359608650, -0.0910193983871684, -1.57021719928082, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-1.86433016206289, -0.894040122939335, -0.449416995637347, 0.457424847038875, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.0387408283164307, -0.978166135592242, -0.918793862092274, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.131028262406404, 0.378436435720245, -0.625488532086131, -0.49593701127224, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.139761942375158, 0.148420005118273, 0.576613364303993, 0.806475865866949, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.751416088683921, 0.165514438477574, 1.26129787094521, 0.444685821261446, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.62136648329937, 1.44691898293633, 3.89995042419387, 4.0517849478033, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.98886142470899, -0.574475650842447, -0.644357016390513, -0.263965545834465, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.357674444271816, 0.463734016232141, -0.0534007767271152, 0.0861776962410526</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">,-0.352398387171472, 0.095310179804325, -0.341082849178896, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.173953307123438, 0.451075619360216, -0.424647927524938, -0.770028224895903, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.596020469829223, 1.85941811770187, 1.45861502269952, 0.712949807856125, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.285178942233662, -2.22562405185792, -1.48722027970985, 1.41098697371026, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.41098697371026, 1.83098018238134, 1.79840401194672, -1.49610922712710, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.262664309476493, 0.371563556432483, 0.542324290825362, 0.476234178996372, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.207014169384326, 0.828551817566148, 0.779324876800998, -0.215671536475509, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.147340587898709, -0.3147107448397, -0.293029678778376, 0.887891257352457, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.78845736036427, -0.116533816255952, 0.122217632724249, -3.10109278921182, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-2.76462055259060, 0.553885113226438, 0.506817602368451, -0.0212236364516268, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.262364264467491, -0.223143551314210, -0.0408219945202552, -0.0910193983871684, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.0295588022415442, -0.0704224642965458, -0.391562202939173, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.565313809050061, 0.329303747142600, 0.451075619360216, 0.29266961396282, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-3.93222571274567, -3.29683736633791, 0.0198026272961797, 0.978326122793608, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">2.13060982825424, 0.00995033085316831, 0.444685821261446, -0.105360515657826, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.173953307123438, -0.00200200267067319, -1.73727128394399, -1.75446368448436, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.339677367570161, -0.400477566597125, 0.0676586484738147, 0.0861776962410526, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.246860077931526, -0.173163619009189, 0.231111720963387, 0.048790164169432, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.122217632724249, 0.122217632724249, -0.504181081047322, -0.211956361923646, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.76080582903376, 0.633927820899974, -0.136965855073157, 0.0295588022415442, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.41585316336144, 0.182321556793954, -0.211956361923646, -0.136965855073157, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.683096844706444, 0.62057648772511, 1.97408102602201, 1.60542989103656, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.683096844706444, 0.405465108108164, -0.00904074465214918, -0.415515443961666, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.805196684368568, -0.683196849706777,0.0,0.0,0.0,0.0), .Dim = c(47,2,2))</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">)</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<H1><SPAN STYLE="mso-ansi-language : EN-US">Data</SPAN><o:p></o:p></H1>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">list(</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">N=47,</FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">mu=structure(.Data=c(0,0,0,0), .Dim=c(2,2) ),</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">code = c(</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1, 1, 1, 1, 1, 1, 1, 1, 1, 1,</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1, 1, 1, 1, 1, 1, 1, 1, 1, 1, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">2, 2, 2, 2, 2, 2, 2, 2, 2, 2, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">2, 2, 2, 2, 2, 2),</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">R=structure(.Data=c(1,0,0,1),.Dim=c(2,2)),</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><![if !supportEmptyParas]></FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">&nbsp;</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><![endif]><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">lp = structure(.Data = c(-0.867500567704723, -0.772190387900398, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.352398387171472, -0.398986142010455, NA, 0.0582689081239758, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0, NA, 0.095310179804325, 0.0487901641694320, NA, -0.245900538436826, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.145025772050258, -0.341082849178896, NA, -0.302457358033935, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.173953307123438, NA, 0.215111379616945, 0.173953307123438, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.2390169004705, 1.10856261952128, 0.982078472412158, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.451075619360217, 0.350656871613169, NA, -0.136965855073157, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.126697653045958, NA, -0.424647927524938, -0.409473129505703, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.908818717035454, -1.02722229258144, NA, -0.770028224895903, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.911303190363116, NA, -0.266573109241546, -0.55512588266257, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.596020469829223, -0.703197516413447, NA, -0.0565703514883944, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.104360015324243, NA, 1.85941811770187, 1.90805992492422, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.527632742082372, -0.49429632181478, NA, 1.45861502269952, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.49514876603197, NA, 0.548121408509688, 0.548121408509688, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.712949807856125, 0.708035793053696, NA, 0.246860077931526, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.207014169384326, NA, 0.285178942233662, 0.285178942233662, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -2.39689577246529, -2.25379492882461, NA, -2.22562405185792, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-2.13707065451647, NA, -1.42295834549148, -1.59454929994035, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -1.48722027970985, -1.70925824771631, NA, 0.0769610411361284, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.0582689081239758, 1.41098697371026, NA, 1.28093384546206, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.371563556432483, NA, 0.277631736598280, 1.41098697371026, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.34807314829969, -0.39452516806983, -0.373966441048793, -0.369615455214467, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.83098018238134, 1.54968790802833, 1.54968790802833, -0.359536176219765, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.368169323364468, -0.373966441048793, 1.79840401194672, 1.61143591509677, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.61740608208328, -1.27296567581289, NA, -1.27296567581289, -1.49610922712710, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -1.56542102701733, -0.336872316642553, NA, -0.436955775199535, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.262664309476493, NA, -0.355247391947547, 1.02604159583327, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 1.02961941718116, 0.371563556432483, NA, 0.29266961396282, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.512823626428664, NA, 0.476234178996372, 0.542324290825362, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.542324290825362, 0.536493370514568, 0.553885113226438, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.476234178996372, 0.457424847038875, NA, 0.207014169384326, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.139761942375159, NA, 0.207014169384326, 0.148420005118273, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.444685821261446, NA, NA, 0.828551817566148, NA, NA, 0.553885113226438, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.779324876800998, NA, NA, 0.0478373294141601, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.215671536475509, NA, NA, -0.0356271776431512, NA, NA, -0.147340587898709, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, -0.221894331913778, NA, NA, -0.3147107448397, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.104250021373799, NA, NA, -0.293029678778376, NA, NA, 0.357674444271816, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.512823626428664, NA, 0.887891257352457, 0.904218150639886, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.500775287912489, 0.476234178996372, NA, 0.78845736036427, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.756121979721334, NA, -0.84863208340034, NA, -0.911303190363116, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.116533816255952, NA, -0.123298216344494, -0.12897038129696, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.219400565035375, 0.122217632724249, NA, 0.123985979780991, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.916290731874155, 0.871293365943419, 0.727548607277278, -3.10109278921182, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-3.10109278921182, -3.2188758248682, 0.756121979721334, 0.966983846189673, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.792992515529661, -2.76462055259060, -2.70306265959117, -2.86998106824843, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.559615787935423, NA, NA, 0.553885113226438, NA, NA, 0.542324290825362, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.506817602368452, NA, NA, 0.165514438477573, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.0212236364516267, NA, NA, 0.593326845277734, NA, NA, 0.262364264467491, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.405465108108164, NA, 0.314810739840034, -0.223143551314210, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.466808738349216, 0.625938430866495, NA, 0.392042087776024, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.0408219945202552, NA, -0.226900600191922, -0.294371060602578, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.365283318475333, -0.400477566597125, -0.0910193983871685, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.156653810045377, -0.182721636815294, -0.811930716549912, -0.811930716549912, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.814185508937001, 0.0295588022415444, 0.0582689081239758, -0.187535123846842, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.165514438477573, NA, 0.0861776962410524, -0.0704224642965458, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.0779615414697118, -0.207024169434327, NA, -0.136965855073157, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.391562202939173, NA, -0.207024169434327, 0.678033542749897, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.56531380905006, NA, NA, 0.62057648772511, NA, NA, 0.329303747142600, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.371563556432483, NA, 0.371563556432483, 0.451075619360217, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.457424847038875, 0.65232518603969, NA, 0.494696241836107, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.29266961396282, NA, 0.506817602368452, -2.48891467118554, -2.44184716032755, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -3.93222571274567, -4.25451331437492, NA, -0.638658995275876, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.653926467406664, NA, -3.29683736633791, -3.36390159691846, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 1.48160454092422, NA, 1.40044497500497, 0.0198026272961797, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.0888312137066157, -0.59783700075562, NA, -0.59783700075562, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.978326122793608, NA, 0.667829372575655, 0.29266961396282, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.246860077931526, 2.13060982825424, NA, 1.70837786028900, 0.444685821261446, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.494696241836107, 0.0099503308531681, NA, -0.407968238326283, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.327116141697188, NA, NA, -0.269187489815617, NA, NA, -0.311974765020826, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, -0.338273858567841, NA, NA, 0.285178942233662, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.444685821261446, NA, NA, -0.161343150408763, NA, NA, -0.105360515657826, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.190620359608650, NA, NA, 0.173953307123438, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.0910193983871685, NA, NA, -0.00200200267067308, NA, NA, -1.57021719928082, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, -1.73727128394399, NA, NA, -1.86433016206289, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-1.75446368448436, NA, NA, -0.894040122939335, NA, -0.881889305156823, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.339677367570161, NA, -0.515838165589535, -0.449416995637347, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.387134151423441, -0.400477566597125, NA, -0.375420986759788, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.457424847038875, NA, 0.500775287912489, 0.0676586484738149, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.104360015324243, -0.0387408283164306, NA, -0.0110609473594249, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.0861776962410524, NA, 0.165514438477573, -0.978166135592243, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.867500567704723, NA, 0.246860077931526, 0.215111379616945, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.918793862092274, -0.711311151187616, NA, -0.173163619009189, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.20089294237939, NA, 0.131028262406404, 0.476234178996372, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 0.231111720963387, 0.190620359608650, NA, 0.378436435720245, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.536493370514568, NA, 0.0487901641694320, 0.122217632724249, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.62548853208613, NA, NA, 0.122217632724249, NA, NA, -0.49593701127224, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.122217632724249, NA, NA, 0.139761942375159, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">-0.504181081047322, NA, NA, 0.148420005118273, NA, NA, -0.211956361923645, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 0.576613364303994, NA, 0.438254930931155, 0.76080582903376, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, 1.07158361628019, 0.806475865866949, NA, 0.792992515529661, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.633927820899974, NA, 0.792992515529661, 0.751416088683921, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, -0.136965855073157, NA, NA, 0.165514438477573, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.0295588022415444, NA, NA, 1.26129787094521, NA, 1.09527338740260, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.41585316336144, NA, 0.89199803930511, 0.444685821261446, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.500775287912489, 0.182321556793955, NA, 0.506817602368452, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.62136648329937, NA, NA, -0.211956361923645, NA, NA, 1.44691898293633, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, -0.136965855073157, NA, NA, 3.89995042419388, NA, 3.73766961828337, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.683096844706444, NA, 0.78845736036427, 4.05178494780330, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">3.27714473299218, 0.62057648772511, NA, 0.647103242058538, -0.98886142470899, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, 1.97408102602201, NA, NA, -0.574475650842447, NA, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">1.60542989103656, NA, NA, -0.644357016390513, NA, -0.78965808094079, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.683096844706444, NA, 0.741937344729377, -0.263965545834465, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.378336440719912, 0.405465108108164, NA, 0.512823626428664, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">0.357674444271816, NA, NA, -0.00904074465214907, NA, NA, 0.46373401623214, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA, -0.415515443961666, NA, NA, -0.0534007767271153, NA, </FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT
+	FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, -0.805196684368568, NA, NA, 0.0861776962410524, NA, NA, -0.683196849706777, </FONT></SPAN><SPAN
+	STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">NA, NA), .Dim = c(47, 2, 2,3))</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">)</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT
+	FACE="Arial">)</FONT></SPAN><SPAN STYLE="Font-Size : 16pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 16pt"><FONT
+	FACE="Arial"></FONT></SPAN></P>
+
+	<P CLASS="MsoNormal" STYLE="punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 16pt"><FONT
+	FACE="Arial">Results</FONT></SPAN><SPAN STYLE="Font-Size : 8pt"><FONT FACE="Arial"><o:p></o:p></FONT></SPAN></P>
+	<P CLASS="MsoNormal" STYLE="tab-stops : 0in 56.65pt 102.0pt 147.4pt 192.75pt 238.1pt 283.45pt 328.8pt 374.15pt 419.5pt ; punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN
+	STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN></P>
+	<P CLASS="MsoNormal">
+	<TABLE BORDER="1" WIDTH="84%">
+		<TR>
+			<TD WIDTH="11%">
+				<DIV ALIGN="CENTER" CLASS="Section1">
+					<P CLASS="MsoNormal" STYLE="tab-stops : 0in 56.65pt 102.0pt 147.4pt 192.75pt 238.1pt 283.45pt 328.8pt 374.15pt 419.5pt ; punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><B><SPAN
+					STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">node</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT
+					FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN></B>
+				</DIV>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">mean</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">sd</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">MC error</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp; </FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">2.5%</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;&nbsp;</FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">median</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				&nbsp;&nbsp;</FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">97.5%</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">start</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN></B>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">sample</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN></B>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">cor[1,1]</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT
+				FACE="Arial">  </FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.5346</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial"> &nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.1315</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><B><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN></B><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.001055</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp; </FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.2439</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp; </FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.5469</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.7561</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1001</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<DIV ALIGN="CENTER" CLASS="Section1">
+					<P CLASS="MsoNormal" STYLE="tab-stops : 0in 56.65pt 102.0pt 147.4pt 192.75pt 238.1pt 283.45pt 328.8pt 374.15pt 419.5pt ; punctuation-wrap : hanging ; mso-vertical-align-alt : auto"><SPAN
+					STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp; </FONT></SPAN><SPAN
+					STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">cor[1,2]</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT
+					FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+				</DIV>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.2567</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.2124</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.001507</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-0.19</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.2702</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.628</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1001</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">cor[2,1]</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.1869</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.1755</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.001291</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-0.1721</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.1924</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.5121</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1001</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">cor[2,2]</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.3579</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.1995</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.001492</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-0.07114</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.3726</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.7011</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1001</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">sigmae[1]</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.008349</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.001687</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">6.761E-5</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.005601</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.00814</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.01218</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1001</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">sigmae[2]</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.006677</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.003019</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1.499E-4</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.001425</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.006513</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.01312</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1001</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">h2[1]</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.5536</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.4989</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.003914</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-0.4021</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.542</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">1.567</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">21001</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+		</TR>
+		<TR>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-spacerun : yes ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">h2[2]</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 2 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-0.3356</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.5348</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.004365</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-1.354</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">-0.35</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">0.747</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="12%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;
+				</FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">21001</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;</FONT></SPAN>
+			</TD>
+			<TD WIDTH="11%">
+				<P ALIGN="CENTER"><SPAN STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </FONT></SPAN><SPAN STYLE="mso-ansi-language : EN-US ; Font-Size : 8pt"><FONT FACE="Arial">20000</FONT></SPAN><SPAN
+				STYLE="mso-ansi-language : EN-US ; mso-tab-count : 1 ; Font-Size : 8pt"><FONT FACE="Arial">&nbsp;&nbsp;&nbsp;&nbsp;</FONT></SPAN>
+			</TD>
+		</TR>
+	</TABLE>
+
+</DIV>
+
+
+</BODY>
+
+</HTML>

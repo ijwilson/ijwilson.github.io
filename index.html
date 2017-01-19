@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Ian J Wilson --  Software Downloads</title>
 <style type="text/css">
-body {color: black; background: white;}
+body {color: #03171C; background: #F1FCFF;}
 h1{font: 200%}
 h2{font: 150%}
 h3{font: 120%}
@@ -13,58 +13,58 @@ h3{font: 120%}
 <body>
 <h1>Home Page for Ian Wilson</h1>
  <h3> Institute of Genetic Medicine<br>Newcastle University</h3>
-<p><a href=
-"mailto:Ian.Wilson@ncl.ac.uk">Ian.Wilson@ncl.ac.uk</a><br>
+<p><a href="mailto:Ian.Wilson@ncl.ac.uk">Ian.Wilson@ncl.ac.uk</a><br>
  <a href="http://www.ncl.ac.uk/igm/staff/profile/ian.wilson">
 Institutional Home Page with contact details and publications</a>
  </p>
+  This page contains links to example code, code fragments and source code that are used
+  in published and other work.
+ <p>
+ </p>
 <hr>
-<table summary="Available software">
-<tbody>
-
-<tr><td width="15%"><strong>New</strong></td></tr>
-<tr></tr>
-<tr>
- <td>18 January 2017</td><td><a href="http://rpubs.com/ijwilson/242602">JAGS Analysis of Copy Number</a></td>
-</tr>
-
-<tr bgcolor="#D8FFF0">
- <td>12 November 2014</td><td>Extreme-depth re-sequencing of mitochondrial DNA finds no evidence of
-   paternal transmission in humans</td>
- </tr>
-<tr bgcolor="#D8FFF0">
-  <td></td><td><a href="PaternalTransmission/index.html">Data & Code</a></td>
- </tr>
-
-<tr><td></td>
-  <td>
-Inference for Maternal Pedigrees with Partial Selfing <b>IMPPS</b> </td></tr>
-<tr><td></td>
-  <td><a href="impps/index.html">Home Page</a>
-</td></tr>
- <tr bgcolor="#D8FFF0"><td></td>
- <td><b><a href="QTLtree/index.html">QTLtree</a></b> R library and stand alone program </td></tr>
- <tr bgcolor="#D8FFF0"><td></td>
-   <td>   <a href="QTLtree/index.html">Home Page</a></td></tr>
-</tbody>
+<table summary="Available Software"  border=0  cellspacing=5>
+  <tbody>
+    <tr>
+      <td>18 January 2017</td><td><a href="http://rpubs.com/ijwilson/242602">JAGS Analysis of Copy Number</a></td>
+    </tr>
+    <tr bgcolor="#D8FFF0">
+      <td>12 November 2014</td><td>Extreme-depth re-sequencing of mitochondrial DNA finds no evidence of
+        paternal transmission in humans.  Pyle <em>et al.</em> 2015.  PloS Genetics.  <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1005040">link</a> <br>
+        <a href="PaternalTransmission/index.html">Data & Code</a></td>
+    </tr>
+    <tr>
+      <td></td>
+      <td>A Markov chain Monte Carlo strategy for sampling from the joint posterior distribution of pedigrees and population parameters under a Fisher–Wright model with partial selfing. 2007. Theor. Popul. Biol. <a href="http://www.sciencedirect.com/science/article/pii/S0040580907000214">link</a> <br />
+The program described in this paper is <em>Inference for Maternal Pedigrees with Partial Selfing <b>IMPPS</b> </em><br />
+        <a href="impps/index.html">Home Page</a> </td>
+      </tr>
+    <tr bgcolor="#D8FFF0">
+      <td></td>
+      <td><b><a href="QTLtree/index.html">QTLtree</a></b> R library and stand alone program <br />
+      <a href="QTLtree/index.html">Home Page</a></td>
+    </tr>
+  </tbody>
 </table>
 <hr>
 
 <h2>R packages</h2>
-<p>Packages (with varying degree of completeness) for the
+<p>
+  Packages (with varying degree of completeness) for the
   <a href="http://cran.r-project.org/">R</a> software system. Latest versions
   in my <a href="R">R package directory</a><br>
   <br>
   Install packages on unix/linux using the commands<br>
   <code>R CMD INSTALL packagename.tar.gz</code><br>
-  <p>To install on a windows systems use the zip versions
-      and install from within R using <br>
-    <code>install.packages("packagename.zip",repos=NULL)</code><br>
-    <br>
-    Where you have downloaded the package to your working directory.  Once installed the
-    zip file can be safely deleted.
-    <br>
-    <br>
+<p>
+  To install on a windows systems use the zip versions
+  and install from within R using <br>
+  <code>install.packages("packagename.zip",repos=NULL)</code><br>
+  <br>
+  Where you have downloaded the package to your working directory.  Once installed the
+  zip file can be safely deleted.
+  <br>
+  <br>
+
 <table bgcolor="#C3E3E4" cellspacing="20" summary="R packages">
   <tbody>
     <tr>
@@ -108,7 +108,7 @@ Inference for Maternal Pedigrees with Partial Selfing <b>IMPPS</b> </td></tr>
           <td></td>
           <td>Create and plot lexical trees from SNP data.  Used in paper
             <i>Recent mitochondrial DNA mutations increase the risk of developing multiple common late-onset human diseases</i>,
-            by Hudson <i>et al.</i>
+            by Hudson <i>et al.</i> <a href="http://journals.plos.org/plosgenetics/article?id=10.1371/journal.pgen.1004369">link</a>
           </td>
         </tr>
       </tbody>
@@ -131,93 +131,95 @@ Inference for Maternal Pedigrees with Partial Selfing <b>IMPPS</b> </td></tr>
 <h2>C/C++ Software</h2>
 <h3>Unix Systems</h3>
 <p>All Software on this page is in the form of zipped tar files.
-Use<br>
-<font face="Courier New, Courier">gunzip -c filename.tar.gz | tar
-xf -</font><br>
-then type <font face="Courier New, Courier">make</font><br>
-to compile the program. A limited manual for micsat is in the file
-<font face="Courier New, Courier">micsat.doc</font>. Other manuals
-can be downloaded in pdf format.</p>
+  Use<br>
+  <code>gunzip -c filename.tar.gz | tar xf -</code> <br>
+  then type <code>make</code><br>
+  to compile the program. A limited manual for micsat is in the file
+  <em>micsat.doc</em>. Other manuals can be downloaded in pdf format.
+</p>
+
 <h3>Windows (95/98/NT)</h3>
-<p>The programs are distributed as executable files in a zip file
-format</p>
+<p>
+  The programs are distributed as executable files in a zip file format
+</p>
+
 <h3>Macintosh (MacOS 8.0 or above)</h3>
-<p>A binhex-ed executable for the Macintosh, MacBatwing, may be
-downloaded.<br>
-On launching, the program opens a dialog box with a text field. The
-user puts the program arguments (infile outfile seed) into this
-field and hits ok.<br>
-(Compilation on the Mac courtesy of Oliver Pybus - send
-comments/bugs to <a href=
+<p>
+  A binhex-ed executable for the Macintosh, MacBatwing, may be downloaded.<br>
+  On launching, the program opens a dialog box with a text field. The
+  user puts the program arguments (infile outfile seed) into this
+  field and hits ok.<br>
+  (Compilation on the Mac courtesy of Oliver Pybus - send
+  comments/bugs to <a href=
 "mailto:Ian.Wilson@ncl.ac.uk">Ian.Wilson@ncl.ac.uk</a>).</p>
-<p><br></p>
+<br>
 <table border="1" summary="C software">
-<tbody>
-<tr>
-<td width="237">&nbsp;</td>
-<td><b><a href="#micsat">Micsat</a></b></td>
-<td><b><a href="#batwing">Batwing</a></b></td>
-<td><b><a href="#parentage">Parentage</a></b></td>
-<td><b><a href="#hapgen">Hapgen</a></b></td>
-<td><b>Ancestors</b></td>
-</tr>
-<tr>
-<td>Unix</td>
-<td><a href="micsat/micsat.tar.gz">micsat.tar.gz</a></td>
-<td><a href="batwing/batwing.tar.gz">batwing.tar.gz</a></td>
-<td><a href="parentage/parentage.tar.gz">parentage.tar.gz</a></td>
-<td><a href="hapgen/hapgen.tar.gz">hapgen.tar.gz</a></td>
-<td><a href="ancestors.tar.gz">ancestors.tar.gz</a></td>
-</tr>
-<tr>
-<td>Windows 95/NT</td>
-<td><a href="micsat/micsat.zip">micsat.zip</a></td>
-<td><a href="batwing/batwing.exe">batwing.exe</a></td>
-<td><a href="parentage/parentage.exe">parentage.exe</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Macintosh (MacOS 8.0 or above)</td>
-<td>&nbsp;</td>
-<td><a href="batwing/MacBatwing.hqx">MacBatwing</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Manuals (pdf format)</td>
-<td>&nbsp;</td>
-<td><a href="batwing/batguide.pdf">bat_guide.pdf</a></td>
-<td><a href="parentage/parentage.pdf">parentage.pdf</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Examples (inc R code)</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><a href=
-"parentage/parexamples.tar.gz">parexamples.tar.gz</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr>
-<td>Postprocessing (S/R code)</td>
-<td>&nbsp;</td>
-<td><a href="batwing/Batwing.R">batwing.r</a></td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-<tr><td>Web interfaces</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-<td><a href="http://cbsuapps.tc.cornell.edu/parentage.aspx">Web inferface at BioHP.org</a>&nbsp;</td>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
-</tr>
-</tbody>
+  <tbody>
+    <tr>
+      <td width="237">&nbsp;</td>
+      <td><b><a href="#micsat">Micsat</a></b></td>
+      <td><b><a href="#batwing">Batwing</a></b></td>
+      <td><b><a href="#parentage">Parentage</a></b></td>
+      <td><b><a href="#hapgen">Hapgen</a></b></td>
+      <td><b>Ancestors</b></td>
+    </tr>
+    <tr>
+      <td>Unix</td>
+      <td><a href="micsat/micsat.tar.gz">micsat.tar.gz</a></td>
+      <td><a href="batwing/batwing.tar.gz">batwing.tar.gz</a></td>
+      <td><a href="parentage/parentage.tar.gz">parentage.tar.gz</a></td>
+      <td><a href="hapgen/hapgen.tar.gz">hapgen.tar.gz</a></td>
+      <td><a href="ancestors.tar.gz">ancestors.tar.gz</a></td>
+    </tr>
+    <tr>
+      <td>Windows 95/NT</td>
+      <td><a href="micsat/micsat.zip">micsat.zip</a></td>
+      <td><a href="batwing/batwing.exe">batwing.exe</a></td>
+      <td><a href="parentage/parentage.exe">parentage.exe</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Macintosh (MacOS 8.0 or above)</td>
+      <td>&nbsp;</td>
+      <td><a href="batwing/MacBatwing.hqx">MacBatwing</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Manuals (pdf format)</td>
+      <td>&nbsp;</td>
+      <td><a href="batwing/batguide.pdf">bat_guide.pdf</a></td>
+      <td><a href="parentage/parentage.pdf">parentage.pdf</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Examples (inc R code)</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><a href="parentage/parexamples.tar.gz">parexamples.tar.gz</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Postprocessing (S/R code)</td>
+      <td>&nbsp;</td>
+      <td><a href="batwing/Batwing.R">batwing.r</a></td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr>
+      <td>Web interfaces</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td><a href="http://cbsuapps.tc.cornell.edu/parentage.aspx">Web inferface at BioHP.org</a>&nbsp;</td>
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
 </table>
 <br>
 <br>
