@@ -1,0 +1,174 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+
+<HEAD>
+	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
+	<TITLE>The MICSAT Package</TITLE>
+</HEAD>
+
+<BODY bgcolor= "lightcyan">
+
+<P>
+	Program as described in: <br>
+Genealogical Inference from Microsatellite Data. 1998. Wilson and Balding.<BR>
+
+Please email me, Ian Wilson is you have any problems at <a href="mailto:ian.wilson@newcastle.ac.uk">ian.wilson@newcastle.ac.uk</a>
+
+<H3>Making The Program</H3>
+<P>
+	The program is distributed as C source files (although an
+	executable for Windows (within an MSDOS window) is also available from the
+	<a href="download.htm">main</a> web site is also available.
+<br>
+This program is written in ANSI C and if the
+gnu c compiler gcc is available should
+compile on unix systems by typing
+<BR>
+	<code>make</code>
+<BR>
+otherwise the line<BR>
+<code>CC = gcc </code><BR>
+in the makefile should be altered to give name of the local c compiler.
+<H3>Input</H3>
+<P><BR>
+The program is command line driven with command line:<BR>
+<BR>
+<code>micsat inputfile outputfile</code><BR>
+<BR>
+An example inputfile is given as cooper.inp - which gives<BR>
+some example parameters and reads in the file cooper.dat<BR>
+taken from the paper:<BR>
+<BR>
+<CITE>Cooper, G., W. Amos, D. Hoffman &amp; D. C. Rubinsztein, 1996 Network
+analysis of human Y microsatellite haplotypes. Hum. Mol. Genet. 5: 1759-1766</CITE>.
+<BR>
+file cooper.inp:<BR>
+	<br />
+<code>
+samples: 10000<br />
+warmup: 2000<BR>
+treebetN: 40<BR>
+Nbetsamp: 100<BR>
+tuneN: 3000<BR>
+tunemu: 0.001<BR>
+muprior: gamma(4,1492)<BR>
+Nprior: lognormal(9,1)<BR>
+datafile: cooper.dat<BR>
+badness: 0.4<BR>
+seed: 1<BR>
+picgap: 500<BR>
+</code>
+<br />
+The program will look for any of the above `keywords', in any order,<BR>
+in the input file - and if not found will give a warning<BR>
+message and supply default values.<BR>
+
+<H3>OUTPUT</H3>
+<P><BR>
+The program will output a file outputfile.par with all<BR>
+the input values in (so that the program can easily be <BR>
+rerun with the same or similar input).<BR>
+<BR>
+Also output is outputfile which is of the form<BR>
+<BR>
+lltimes llmut mu N height length<BR>
+<BR>
+for each sample taken<BR>
+<BR>
+Further output are files outputfile.iit and<BR>
+outputfile.end which are the initial tree and the <BR>
+final tree (in Newick file format), and <BR>
+files outputfile.a for a = 1 ... which are trees<BR>
+corresponding to the picgap, 2*picgap, 3*picgap,... <BR>
+samples.<BR>
+<BR>
+All these files are in Newick format and can be read by viewing<BR>
+programs such as TreeTool (list of programs kept by the
+<A href =  "http://evolution.genetics.washington.edu/phylip/software.html#Plotting">Phylip Group</A> at Washington State University.<BR>
+<br>
+
+<H3></H3>
+<H3 ALIGN="CENTER">FILES INCLUDED IN THE DISTRIBUTION</H3>
+<P>
+<CENTER>
+<P>
+<TABLE BORDER="1" WIDTH="66%">
+	<TR>
+		<TD WIDTH="18%">micsat.c</TD>
+		<TD WIDTH="17%">&nbsp;</TD>
+		<TD WIDTH="65%">The main program</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">Newick.c</TD>
+		<TD WIDTH="17%">Newick.h</TD>
+		<TD WIDTH="65%">Functions for Outputing trees in &quot;Newick&quot; Format</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">cutjoin.c</TD>
+		<TD WIDTH="17%">cutjoin.h</TD>
+		<TD WIDTH="65%">Functions for Changing the Shape of the Tree</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">likelihood.c</TD>
+		<TD WIDTH="17%">likelihood.h</TD>
+		<TD WIDTH="65%">Calculating Likelihoods of mutations</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">metro.c</TD>
+		<TD WIDTH="17%">metro.h</TD>
+		<TD WIDTH="65%">Changing mu, N and times</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">node.c</TD>
+		<TD WIDTH="17%">node.h</TD>
+		<TD WIDTH="65%">Defining Nodes, and node functions</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">prior.c</TD>
+		<TD WIDTH="17%">prior.h</TD>
+		<TD WIDTH="65%">Prior Functions</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">random.c</TD>
+		<TD WIDTH="17%">random.h</TD>
+		<TD WIDTH="65%">Psuedo-random number generation</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">pars.c</TD>
+		<TD WIDTH="17%">pars.h</TD>
+		<TD WIDTH="65%">Inputs/Outputs to File</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">time.c</TD>
+		<TD WIDTH="17%">time.h</TD>
+		<TD WIDTH="65%">Likelihood of coalescence times</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">tree.c</TD>
+		<TD WIDTH="17%">tree.h</TD>
+		<TD WIDTH="65%">Defining Trees, starting and destroying</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">utils.c</TD>
+		<TD WIDTH="17%">utils.h</TD>
+		<TD WIDTH="65%">Utility Functions</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="18%">check.c</TD>
+		<TD WIDTH="17%">check.h</TD>
+		<TD WIDTH="65%">Checking Functions (not required)</TD>
+	</TR>
+</TABLE>
+
+</CENTER>
+<P><BR>
+Also:<BR>
+<BR>
+makefile Makefile for unix machines<BR>
+micsat.doc (This document)<BR>
+cooper.inp input file for Cooper et al data (1996)<BR>
+cooper.dat The Cooper et al data (excluding Alu insert) <BR>
+
+
+</BODY>
+</HTML>
