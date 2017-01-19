@@ -1,0 +1,22 @@
+#!/bin/bash
+
+## obtain the pedigree information for the samples
+wget ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20110521/supporting/phase1_samples_integrated_20101123.ped
+## use tabix to get a copy of the data
+tabix -fh ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/phase1/analysis_results/integrated_call_sets/ALL.chr2.integrated_phase1_v3.20101123.snps_indels_svs.genotypes.vcf.gz 2:178404570-179734924 > temporary.vcf
+## transform to get phased output in IMPUTE format
+vcftools --vcf temporary.vcf --IMPUTE --out impute1K 
+## subselect the genotypes at the positions given by the first column of file.  
+## Don't use rs numbers as some rs numbers are new to 1000 genomes
+## output gives a report of matches, mismatches  
+python filter1000genomes.py > reportmatches.txt
+## prepare data for haploview
+R --vanilla < haploview_phase.R
+## prepare data for PHASE
+R --vanilla < Transform_PHASE.R
+## Run PHASE.  The short run below is for demonstration purposes
+## the commented out ones below should be used for longer runs
+PHASE -kphase1K.known phase1K.inp phase1K.out 
+#PHASE -kphase1K.known -S1001 -X10 -x5 phase1K.inp phase1Ka.out & 
+#PHASE -kphase1K.known -S1002 -X10 -x5 phase1K.inp phase1Kb.out &
+
