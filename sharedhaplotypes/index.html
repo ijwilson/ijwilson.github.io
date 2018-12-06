@@ -3,10 +3,15 @@
 <meta http-equiv=Content-Type content="text/html; charset=windows-1252">
 </head>
 <body lang=EN-GB link=blue vlink=purple>
-<p> <b>Software and Scripts.</b></p>
+<h2>Software and Scripts.</h2>
 
-Software and scripts used in the paper ... .  These have all been tested on ubuntu and red hat linux.  .  The tools tabix, vcftools and R are available as part of the ubuntu package management system and 
-can be installed using <code>sudo apt-get install tabix vcftools rbase </code> 
+<h4>Ian Wilson</h4>
+
+
+Software and scripts used in the paper paper <b>Titin founder mutation is a common
+  cause of myofibrillar myopathy with early respiratory failure</b>.  2014.  Pfeffer <em> et al.</em>
+ <a href="http://jnnp.bmj.com/content/85/3/331.short">link</a>.  These have all been tested on ubuntu and red hat linux.  .  The tools tabix, vcftools and R are available as part of the ubuntu package management system and
+can be installed using <code>sudo apt-get install tabix vcftools rbase </code>
 
 <ul>
 <li><a href="http://samtools.sourceforge.net/">tabix</a> available as part of the <a href="http://sourceforge.net/projects/samtools/">samtools</a> package.</li>
@@ -17,10 +22,10 @@ can be installed using <code>sudo apt-get install tabix vcftools rbase </code>
 </ul>
 
 
-The custom written scripts and R code used are 
+The custom written scripts and R code used are
 <ul>
 <li>
-<a href="1000_genomes_script" >1000_genomes_script</a>.  Uses tabix and vcftools to download. 
+<a href="1000_genomes_script" >1000_genomes_script</a>.  Uses tabix and vcftools to download.
 <li>
 <a href="filter1000genomes.py" >filter1000genomes.py</a>
 <li>
@@ -35,38 +40,65 @@ Data Files
 <ul>
 <li><a href="ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20110521/supporting/phase1_samples_integrated_20101123.ped">
 phase1_samples_integrated_20101123.ped
-</a> 
+</a>
 downloaded from the 1000 genomes data repository.
 </ul>
 
 
 <p>The 100 genomes data was <span style='color:windowtext'>downloaded
-between positions 178404570 and 179734924 using <b>tabix</b> .  This was then converted to the IMPUTE
-format for phased data by <b>vcftools</b> (</span><a
-href="http://vcftools.sourceforge.net/"><span style='color:windowtext'>vcftools.sourceforge.net</span></a><span style='color:windowtext'>). 
-Filtering this data by only including positions shared with our assays was performed using a custom written <b>python</b> script,<a href="filter1000genomes.py" >filter1000genomes.py</a>, and
-then the data was prepared for the programs <b>PHASE </b>(</span><a
-href="http://stephenslab.uchicago.edu/software.html"><span style='color:windowtext'>PHASE</a>) and  <a
-href="http://www.broad.mit.edu/mpg/haploview/">haploview/</a> using <b>R</b> scripts, selecting only
-those individuals from the CEU and GB populations that did not have
-parents in the data set, and by adding homozygote wild type alleles
-at the disease position for 1000 genomes data.  </span></p>
-<p class=MsoNormal style='margin-left:0cm'><span style='color:windowtext'>Sample
-information was obtained from the file </span>
-<a href="ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20110521/supporting/phase1_samples_integrated_20101123.ped"><span
-style='color:windowtext'>phase1_samples_integrated_20101123.ped</span></a><span
-style='color:windowtext'> downloaded from the 1000 genomes data repos<b>itory. </b></span></p>
+between positions 178404570 and 179734924 using <b>tabix</b>.  This was then
+converted to the IMPUTE format for phased data by <b>vcftools</b> (<a
+href="http://vcftools.sourceforge.net/">vcftools.sourceforge.net</a>).
+Filtering this data by only including positions shared with our assays was performed using a custom written <b>python</b> script,
+ <a href="filter1000genomes.py" >filter1000genomes.py</a>, and
+then the data was prepared for the programs <a
+href="http://stephenslab.uchicago.edu/software.html">PHASE</a> and  <a
+href="http://www.broad.mit.edu/mpg/haploview/">haploview/</a> using <b>R</b>
+scripts, selecting only those individuals from the CEU and GB populations
+that did not have parents in the data set, and by adding homozygote wild
+type alleles at the disease position
+ for 1000 genomes data.</p>
 
-<p class=MsoNormal style='margin-left:0cm'><b><span style='color:windowtext'>PHASE</span></b><span
-style='color:windowtext'> was used to phase haplotypes, using the known
-haplotypes option to use the 1000 genomes data as known phase data.  The pairs
+<p>
+  Sample
+ information was obtained from the file
+ <a href="ftp://ftp.1000genomes.ebi.ac.uk/vol1/ftp/release/20110521/supporting/phase1_samples_integrated_20101123.ped">
+ phase1_samples_integrated_20101123.ped</span></a><span
+ style='color:windowtext'> downloaded from the 1000 genomes data repository.
+</p>
+
+<b>PHASE</b> was used to phase haplotypes, using the known
+haplotypes option to use the 1000 genomes data as known phase data. The pairs
 output file was used to determine the relative posterior probability of the
-different haplotype reconstructions for these data.  <b>R</b> was used for post
-processing of <b>PHASE</b> pairs output.  The <b>haploview</b> program was used
+different haplotype reconstructions for these data. <b>R</b> was used for post
+processing of <b>PHASE</b> pairs output. The <b>haploview</b> program was used
 to investigate the haplotype structure of the population data and to produce
-plots. </span></p>
+plots.
+</p>
+<hr>
+<h3>Workflow</h3>
 
+Once you have all the tools installed, then the analysis done in the paper can
+be repeated with the following commands.
 
-</div>
+<ul>
+  <li>
+    Create a working directory and copy the files <code>1000_genomes_script</code>,
+    <code>haploview_phase.R</code>, <code>Transform_PHASE.R</code>,
+    <code>HMERFmatch1K.csv</code>,  <code>HMERF_Haplotype.csv </code>,
+    <code>filter1000genomes.py</code> and <code>readphase.R</code>.
+  </li>
+  <li>
+    Run the <code>1000_genomes_script</code> using <br />
+    <code>bash 1000_genomes_script</code>
+  </li>
+  <li>
+    <code>R --vanilla readphase.R</code>
+  </li>
+</ul>
+<hr />
+<p>
+  <a href="mailto:ian.wilson@newcastle.ac.uk">ian.wilson@newcastle.ac.uk</a>
+</p>
 </body>
 </html>
