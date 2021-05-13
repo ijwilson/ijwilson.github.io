@@ -1,22 +1,23 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
-<HTML>
+<html>
 
-<HEAD>
+<head>
 	<META HTTP-EQUIV="Content-Type" CONTENT="text/html;CHARSET=iso-8859-1">
 	<TITLE>The MICSAT Package</TITLE>
 </HEAD>
 
 <BODY bgcolor= "lightcyan">
 
+	<h1>The MICSAT Package</h1>
 <P>
 	Program as described in: <br>
 Genealogical Inference from Microsatellite Data. 1998. Wilson and Balding.<BR>
 
 Please email me, Ian Wilson is you have any problems at <a href="mailto:ian.wilson@newcastle.ac.uk">ian.wilson@newcastle.ac.uk</a>
 
-<H3>Making The Program</H3>
+<H2>Making The Program</H2>
 <P>
-	The program is distributed as C source files (although an
+	This program is distributed as C source files (although an
 	executable for Windows (within an MSDOS window) is also available from the
 	<a href="download.htm">main</a> web site is also available.
 <br>
@@ -29,21 +30,23 @@ Please email me, Ian Wilson is you have any problems at <a href="mailto:ian.wils
 otherwise the line<BR>
 <code>CC = gcc </code><BR>
 in the makefile should be altered to give name of the local c compiler.
-<H3>Input</H3>
-<P><BR>
+
+<H2>Input</H2>
+<P>
 	The program is command line driven with command line:<BR>
 <br>
 	<code>micsat inputfile outputfile</code><BR>
-<br>
-	An example inputfile is given as cooper.inp - which gives<BR>
-	some example parameters and reads in the file cooper.dat<BR>
+
+	An example <em>inputfile</em> is given as <em>cooper.inp</em> - which gives
+	some example parameters and reads in the file <em>cooper.dat</em>
 	taken from the paper:<BR>
 <BR>
 <CITE>Cooper, G., W. Amos, D. Hoffman &amp; D. C. Rubinsztein, 1996 Network
 analysis of human Y microsatellite haplotypes. Hum. Mol. Genet. 5: 1759-1766</CITE>.
 <BR>
+	<hr>
 file cooper.inp:<BR>
-	<br />
+<br/>
 <code>
 	samples: 10000<br />
 	warmup: 2000<BR>
@@ -58,18 +61,19 @@ file cooper.inp:<BR>
 	seed: 1<BR>
 	picgap: 500<BR>
 </code>
-<br />
+<hr>
+<br>
 The program will look for any of the above `keywords', in any order,<BR>
 in the input file - and if not found will give a warning<BR>
 message and supply default values.<BR>
 
-<H3>OUTPUT</H3>
-<P><BR>
+<h2>Output</h2>
+<P>
 	The program will output a file outputfile.par with all<BR>
 	the input values in (so that the program can easily be <BR>
 	rerun with the same or similar input).<BR>
 <BR>
-Also output is outputfile which is of the form<BR>
+Also output is <em>editoutputfile</em> which is of the form<BR>
 <BR>
 lltimes llmut mu N height length<BR>
 <BR>
@@ -87,12 +91,10 @@ programs such as TreeTool (list of programs kept by the
 <A href =  "http://evolution.genetics.washington.edu/phylip/software.html#Plotting">Phylip Group</A> at Washington State University.<BR>
 <br>
 
-<H3></H3>
-<H3 ALIGN="CENTER">FILES INCLUDED IN THE DISTRIBUTION</H3>
+<H3>FILES INCLUDED IN THE DISTRIBUTION</H3>
 <P>
-<CENTER>
-<P>
-<TABLE BORDER="1" WIDTH="66%">
+
+<TABLE BORDER="1" WIDTH="50%">
 	<TR>
 		<TD WIDTH="18%">micsat.c</TD>
 		<TD WIDTH="17%">&nbsp;</TD>
@@ -162,13 +164,24 @@ programs such as TreeTool (list of programs kept by the
 
 </CENTER>
 <P><BR>
-Also:<BR>
-<BR>
-makefile Makefile for unix machines<BR>
-micsat.doc (This document)<BR>
-cooper.inp input file for Cooper et al data (1996)<BR>
-cooper.dat The Cooper et al data (excluding Alu insert) <BR>
+<h3>Other Files:</h3>
 
+<TABLE BORDER="1" WIDTH="50%">
+	<TR>
+		<TD WIDTH="20%">micsat.doc</TD>
+		<TD WIDTH="65%">This document</TD>
+	</TR>
+	<TR>
+		<TD WIDTH="20%">makefile</TD>
+		<TD WIDTH="65%"> Makefile for unix machines</TD>
+	</TR>	<TR>
+		<TD WIDTH="20%">cooper.inp</TD>
+		<TD WIDTH="65%">input file for Cooper et al data (1996)</TD>
+	</TR>	</TR>	<TR>
+		<TD WIDTH="20%">cooper.dat</TD>
+		<TD WIDTH="65%">The Cooper et al data (excluding Alu insert)</TD>
+	</TR>
 
-</BODY>
+</body>
+
 </HTML>
