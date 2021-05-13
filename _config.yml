@@ -1,1 +1,4 @@
-theme: jekyll-theme-modernist
+theme: jekyll-theme-modernist#
+
+title: "Ian Wilson"
+description: "Pages for software and extra information from papers"
