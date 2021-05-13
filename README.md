@@ -6,3 +6,8 @@ It is a slight improvement to the university one but needs lots more work.  And 
 links are not broken.
 
 I should make a copy of this on my university home page when it is finished
+
+
+A course to use Jekll on github pages is
+
+https://lab.github.com/githubtraining/github-pages
